@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
- * Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>
+ * Copyright &copy; 2015 Dong Kim <donm93@fullerton.edu>
  * Released under the [MIT License] (http://opensource.org/licenses/MIT)
  * ------------------------------------------------------------------------- */
 
@@ -23,8 +23,7 @@ template <typename T, const unsigned int SIZE>
 void print_max(const string & filename) {
 
     ifstream infile(filename);
-    // - this file will be closed by the object's destructor when the
-    //   `ifstream` exists scope (i.e. when this function returns)
+
 
     Point<T,SIZE> p, pmax;
 
@@ -41,9 +40,9 @@ void print_max(const string & filename) {
         try {
             infile >> p;
         } catch (typename Point<T,SIZE>::EmptyStreamError & e) {
-            break;  // we must be done reading
+            break; 
         } catch (typename Point<T,SIZE>::InvalidSymbolError & e) {
-            // clear the line and keep trying
+           
             cerr << "ERROR: ignoring invalid element (" << e.what() << ")\n";
             cerr << "  source code line: " << __LINE__ << endl;
             cerr << "  reading from: " << filename << endl;
