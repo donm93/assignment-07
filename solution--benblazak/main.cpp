@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
- * Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>
+ * Copyright &copy; 2015 Dong Kim <donm93@fullerton.edu>
  * Released under the [MIT License] (http://opensource.org/licenses/MIT)
  * ------------------------------------------------------------------------- */
 
